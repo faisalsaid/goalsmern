@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 const { getGoals, addGoal, editGoal, deleteGoal } = require('../controllers/goalControllers');
 
+const { protected } = require('../middelware/authMiddleware');
+
 // @- modern way to write crud route
-router.route('/').get(getGoals).post(addGoal);
-router.route('/:id').put(editGoal).delete(deleteGoal);
+router.route('/').get(protected, getGoals).post(protected, addGoal);
+router.route('/:id').put(protected, editGoal).delete(protected, deleteGoal);
 
 module.exports = router;
 
