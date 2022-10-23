@@ -1,0 +1,21 @@
+{
+  "name": "mern_demo",
+  "version": "1.0.0",
+  "description": "To learn mern full stack use JWT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node beckend/index.js",
+    "dev": "nodemon beckend/index.js"
+  },
+  "author": "Faisal Said",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
